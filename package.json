@@ -1,0 +1,33 @@
+{
+  "name": "@jc/single-spa-cra-shell",
+  "version": "1.0.0",
+  "description": "single-spa with shell cra-react",
+  "main": "index.js",
+  "workspaces": [
+    "/packages/apps/*"
+  ],
+  "scripts": {
+    "start:shell": "npm run start --workspace=@jc/shell",
+    "build:shell": "npm run build --workspace=@jc/shell",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.64",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "5.0.1",
+    "single-spa": "^5.9.4",
+    "typescript": "^4.8.4",
+    "web-vitals": "^2.1.4",
+    "query-string": "^7.1.1"
+  },
+  "author": "",
+  "license": "MIT"
+}
