@@ -1,7 +1,7 @@
 {
   "extends": "ts-config-single-spa",
   "compilerOptions": {
-    "tsx": "react-tsx",
+    "jsx": "react-jsx",
     "declarationDir": "dist"
   },
   "files": ["src/jc-app1jsx"],
