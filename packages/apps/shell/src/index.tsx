@@ -5,6 +5,7 @@ import { LifeCycles, registerApplication, start } from "single-spa";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
+import "zone.js/dist/zone";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,15 +19,27 @@ root.render(
   </React.StrictMode>
 );
 
-// registerApplication({
-//   name: "@single-spa/welcome",
-//   app: (): Promise<LifeCycles> =>
-//     (window as any).System.import(
-//       "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-//     ),
-//   activeWhen: ["/app"],
-// });
+registerApplication({
+  name: "@jc/app1",
+  app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app1"),
+  activeWhen: ["/app1"],
+});
+registerApplication({
+  name: "@jc/app2",
+  app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app2"),
+  activeWhen: ["/app2"],
+});
+registerApplication({
+  name: "@jc/app3",
+  app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app3"),
+  activeWhen: ["/app3"],
+});
+registerApplication({
+  name: "@jc/app4",
+  app: (): Promise<LifeCycles> => (window as any).System.import("@jc/app4"),
+  activeWhen: ["/app4"],
+});
 
-start();
+start({ urlRerouteOnly: true });
 
 reportWebVitals();
