@@ -13,25 +13,20 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@jc/app1": "//localhost:8082/jc-app1.js",
-          "@jc/app2": "//localhost:8083/jc-app2.js",
+          "@jc/app1": "//localhost:8081/jc-app1.js",
+          "@jc/app2": "//localhost:8082/jc-app2.js",
           "@jc/app3": "//localhost:4001/main.js",
           "@jc/app4": "//localhost:4002/main.js"
         }
       }
     </script>
-    <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
-      as="script"
-    />
+    <script src="https://unpkg.com/zone.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/named-exports.min.js"></script>
 
-    <script src="https://unpkg.com/zone.js@0.11.1/bundles/zone.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/named-register.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/import-map-overrides/dist/import-map-overrides.js"></script>
 
@@ -45,5 +40,6 @@
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

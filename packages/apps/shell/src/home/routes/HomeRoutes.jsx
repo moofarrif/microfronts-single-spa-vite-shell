@@ -1,6 +1,4 @@
 import { Header, Footer, Sidebar } from "../../ui";
-import { LifeCycles, registerApplication } from "single-spa";
-import { Outlet } from "react-router-dom";
 
 export const HomeRoutes = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import ShellApp from "./ShellApp";
 import { LifeCycles, registerApplication, start } from "single-spa";
 import reportWebVitals from "./reportWebVitals";
@@ -7,17 +7,28 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import "zone.js/dist/zone";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+import ReactDOM from "react-dom";
 
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ShellApp />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
+
+// const root = ReactDOM.createRoot(
+//   document.getElementById("root") as HTMLElement
+// );
+
+// root.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <ShellApp />
+//     </BrowserRouter>
+//   </React.StrictMode>
+// );
 
 registerApplication({
   name: "@jc/app1",
@@ -41,5 +52,3 @@ registerApplication({
 });
 
 start({ urlRerouteOnly: true });
-
-reportWebVitals();
