@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:ng": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:single-spa:app4": "ng build app4 --configuration production",
-    "serve:single-spa:app4": "ng s --project app4 --disable-host-check --port 4002 --live-reload false"
+    "start": "ng s --project app4 --disable-host-check --port 4002 --live-reload false"
   },
   "private": true,
   "dependencies": {
