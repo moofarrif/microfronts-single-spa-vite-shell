@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start:ng": "ng serve",
-    "build": "ng build",
+    "build:ng": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:single-spa:app4": "ng build app4 --configuration production",
+    "build": "ng build app4 --configuration production",
     "start": "ng s --project app4 --disable-host-check --port 4002 --live-reload false"
   },
   "private": true,

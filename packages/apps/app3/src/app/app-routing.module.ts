@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { AComponent } from './a/a.component';
 import { EmptyRouteComponent } from './empty-route/empty-route.component';
 import { BComponent } from './b/b.component';
+import { HomeComponent } from './home/home.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
     path: 'app3',
-    component: EmptyRouteComponent,
+    component: HomeComponent,
     children: [
       {
         path: 'a',
@@ -19,6 +21,10 @@ const routes: Routes = [
         component: BComponent,
       },
     ],
+  },
+  {
+    path: '**',
+    component: EmptyRouteComponent,
   },
 ];
 
