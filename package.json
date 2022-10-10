@@ -1,12 +1,13 @@
 {
-  "name": "@jc/single-spa-cra-shell",
+  "name": "@jc/single-spa-vite-shell",
   "version": "1.0.0",
   "description": "single-spa with shell cra-react",
   "license": "MIT",
   "author": "",
   "main": "index.js",
   "workspaces": [
-    "/packages/apps/*"
+    "/packages/apps/*",
+    "/packages/lib/*"
   ],
   "scripts": {
     "start:shell": "npm run start --workspace=@jc/shell",

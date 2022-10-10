@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  //TODO investigar formas de redirigir sin routerlink
   constructor() {}
 
   ngOnInit(): void {}
