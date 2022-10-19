@@ -1,5 +1,5 @@
-import { useReducer } from "react";
-import { AuthContext } from "./AuthContext";
+import React, { useReducer } from "react";
+import { AuthContext, AuthState, initialState } from "./AuthContext";
 import { authReducer } from "./authReducer";
 
 import { types } from "../types/types";
@@ -9,7 +9,8 @@ import { types } from "../types/types";
 // }
 
 const init = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+  const isUser = localStorage.getItem("user");
+  const user = isUser ? JSON.parse(isUser) : "";
 
   return {
     logged: !!user,
@@ -17,15 +18,15 @@ const init = () => {
   };
 };
 
-export const AuthProvider = ({ children }) => {
-  const [authState, dispatch] = useReducer(authReducer, {}, init);
-
+export const AuthProvider: React.FC<React.PropsWithChildren<{}>> = ({
+  children,
+}) => {
+  const [authState, dispatch] = useReducer(authReducer, initialState, init);
   const login = (name = "") => {
     const user = { id: "ABC", name };
     const action = { type: types.login, payload: user };
 
     localStorage.setItem("user", JSON.stringify(user));
-
     dispatch(action);
   };
 

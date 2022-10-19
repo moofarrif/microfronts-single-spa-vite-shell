@@ -4,11 +4,10 @@ import { AuthContext } from "../../auth/context/AuthContext";
 
 export const Header = () => {
   const { user, logout } = useContext(AuthContext);
-
   const navigate = useNavigate();
 
   const onLogout = () => {
-    logout();
+    logout?.();
     navigate("/login", {
       replace: true,
     });

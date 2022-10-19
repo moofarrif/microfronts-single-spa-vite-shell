@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build:prod": "tsc && vite build",
     "serve": "vite preview"
   },
   "eslintConfig": {

@@ -7,7 +7,7 @@
     "build:ng": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build": "ng build app3 --configuration production",
+    "build:prod": "ng build app3 --configuration production --base-href app3",
     "start": "ng s --project app3 --disable-host-check --port 4001 --live-reload false"
   },
   "private": true

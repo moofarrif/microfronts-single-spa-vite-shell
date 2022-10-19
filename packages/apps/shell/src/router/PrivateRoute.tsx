@@ -1,9 +1,14 @@
-import { useContext } from "react";
+import React, { PropsWithChildren, ReactNode, useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
 import { AuthContext } from "../auth";
 
-export const PrivateRoute = ({ children }) => {
+interface Props {
+  children: ReactNode;
+}
+// 4368
+
+export const PrivateRoute = ({ children }: any) => {
   const { logged } = useContext(AuthContext);
   const { pathname, search } = useLocation();
 

@@ -2,10 +2,9 @@ import React from "react";
 // import ReactDOM from "react-dom/client";
 import ShellApp from "./ShellApp";
 import { LifeCycles, registerApplication, start } from "single-spa";
-import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import "zone.js/dist/zone";
+// import "zone.js/dist/zone";
 
 import ReactDOM from "react-dom";
 
